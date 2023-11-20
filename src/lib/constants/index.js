@@ -1,0 +1,7 @@
+export const ADD_PRODUCT = 'ADD_PRODUCT';
+export const QUANTITY_INCREASE = 'CART_INCREASE';
+export const QUANTITY_DECREASE = 'CART_DECREASE';
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const WISHLIST = 'WISHLIST';
+export const ADD_SHIPPING = 'ADD_SHIPPING';
