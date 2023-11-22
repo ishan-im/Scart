@@ -50,8 +50,8 @@ const CartScreen = ({ navigation }) => {
 				<View></View>
 			</View>
 
-			{
-				total >0 ? (<>
+			{total > 0 ? (
+				<>
 					<View style={styles.cartItemCardContainer}>
 						<FlatList
 							data={cartItems}
@@ -83,7 +83,9 @@ const CartScreen = ({ navigation }) => {
 										<Text style={styles.rightPrice}>$ {total + 20}</Text>
 									</View>
 
-									<TouchableOpacity style={styles.checkOutButton}>
+									<TouchableOpacity
+										style={styles.checkOutButton}
+										onPress={() => navigation.navigate('CheckOutScreen')}>
 										<Text
 											style={{
 												color: Colors.white,
@@ -97,14 +99,20 @@ const CartScreen = ({ navigation }) => {
 							}
 						/>
 					</View>
-
-					
-				</>) : (
-					<View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-						<Text style={{fontSize: 20, fontFamily:'Manrope-SemiBold', color:Colors.black}}>Cart is empty :(</Text>
-					</View>
-				)
-			}
+				</>
+			) : (
+				<View
+					style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+					<Text
+						style={{
+							fontSize: 20,
+							fontFamily: 'Manrope-SemiBold',
+							color: Colors.black,
+						}}>
+						Cart is empty :(
+					</Text>
+				</View>
+			)}
 		</View>
 	);
 };
@@ -147,8 +155,7 @@ const styles = StyleSheet.create({
 		height: 56,
 		width: '100%',
 		marginTop: 32,
-		marginBottom: 45,
-		borderRadius: 8,
+		marginBottom: 150,
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: Colors.blue,

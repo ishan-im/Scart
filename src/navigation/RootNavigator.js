@@ -12,6 +12,7 @@ import FavouritesScreen from '../screens/FavouritesScreen';
 import Screen4 from '../screens/Screen4';
 import AnimTab1 from '../bottomTab/Tab';
 import SplashScreen from '../screens/SplashScreen';
+import CheckOutScreen from '../screens/CheckOutScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,7 +25,8 @@ const RootNavigator = () => {
 				<Stack.Screen name='Tab1' component={AnimTab1} />
 				<Stack.Screen name='Details' component={DetailScreen} />
 
-				<Stack.Screen name='Screen4' component={Screen4} />
+			  <Stack.Screen name='Screen4' component={Screen4} />
+			  <Stack.Screen name='CheckOutScreen' component={CheckOutScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
